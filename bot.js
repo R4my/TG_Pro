@@ -1358,7 +1358,7 @@ var embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 console.log('[38ab] Send By: ' + message.author.username)
   }
-});
+
 
 
 });
