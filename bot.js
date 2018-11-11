@@ -1401,7 +1401,7 @@ if (message.content.startsWith(prefix + 'trans')) {
         }
     }
 }
-
+});
 
 });
 client.login(process.env.BOT_TOKEN);
