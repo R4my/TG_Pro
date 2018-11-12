@@ -866,9 +866,9 @@ client.on('message', message => {
                     return message.channel.send('**Please make sure that `Support Team` role exists and it\'s not duplicated.**');
                 };
             if(!ticketsStation) {
-                message.guild.createChannel("𝑻𝑰𝑪𝑲𝑬𝑻", "category");
+                message.guild.createChannel("Ticket", "category");
             };
-                message.guild.createChannel(`𝑻𝑰𝑪𝑲𝑬𝑻`, "text").then(ticket => {
+                message.guild.createChannel(`Ticket`, "text").then(ticket => {
                     message.delete()
                         message.channel.send(`تم انشاء تذكرتك. [ ${ticket} ]`);
                     ticket.setParent(ticketsStation);
@@ -898,7 +898,7 @@ client.on('message', message => {
     }
     if(message.content.startsWith(prefix + 'close')) {
             if(!message.member.hasPermission("ADMINISTRATOR")) return;
-        if(!message.channel.name.startsWith("𝑻𝑰𝑪𝑲𝑬𝑻")) {
+        if(!message.channel.name.startsWith("Ticket")) {
             return;
         };  
                 let embed = new Discord.RichEmbed()
