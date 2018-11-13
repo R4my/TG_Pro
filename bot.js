@@ -135,7 +135,6 @@ client.on('message', function(msg) {
 
 
 
-
 client.on('message', message => {
 var prefix = "$";
 
@@ -169,7 +168,7 @@ client.on('message', Sal => { // By : M3roof
   .setFooter(client.user.tag, client.user.avatarURL, true)
   .addField('تاق البوت', client.user.discriminator, true)
   .addField('ايدي البوت', client.user.id, true)
-.addField('     ** → صاحب البوت ←  ** ' ,' **  Pro - ? M3roof#5981 ** ')
+.addField('     ** → صاحب البوت ←  ** ' ,' **  Pro - ? M3roof#6200 ** ')
   Sal.channel.sendEmbed(embed);
 }
 });
@@ -328,7 +327,6 @@ client.on('message', msg => {
     msg.channel.send("وعـلـيـكـم الـسـلام والـرحـمـه")
   }
 });
-
 
 
 
@@ -1281,7 +1279,13 @@ message.channel.sendEmbed(embed);
 console.log('[38ab] Send By: ' + message.author.username)
   }
 
-
+client.on('message', message => {
+   if (message.content.startsWith("$bans")) {
+      message.guild.fetchBans()
+     .then(bans => message.chaneel.send(`${bans.size} عدد اعضاء المبندة من السيرفر `))
+.catch(console.error);
+}
+});
 
 
 });
