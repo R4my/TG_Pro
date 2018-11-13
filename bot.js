@@ -1279,13 +1279,7 @@ message.channel.sendEmbed(embed);
 console.log('[38ab] Send By: ' + message.author.username)
   }
 
-client.on('message', message => {
-   if (message.content.startsWith("$bans")) {
-      message.guild.fetchBans()
-     .then(bans => message.chaneel.send(`${bans.size} عدد اعضاء المبندة من السيرفر `))
-.catch(console.error);
-}
-});
+
 
 
 });
