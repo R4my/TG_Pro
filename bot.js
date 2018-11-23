@@ -901,19 +901,21 @@ var prefix = "$"
 
 
 
-
-client.on('guildMemberAdd', member => {
+ client.on('guildMemberAdd', member => {
     var embed = new Discord.RichEmbed()
     .setThumbnail(member.user.avatarURL)
-  .addField("***شكر لـ انضامك لسيرفرنا***" ,member.user.username )
-    .setDescription('***بكل حب و احترام نتمنا ان تقضي معنا افضل الاوقات***')
+.addField('**عضو جديد**')
+.addField('**الاسم | :bust_in_silhouette:**',`[ ${member} ]`)
+.addField(' **الايدي | :id:** ',`[ ${member.id} ]`)
+.addField('**تاق العضو | :bow_and_arrow:**', member.user.discriminator, true)
+.addField(' **عددنا الأن | :busts_in_silhouette:** ',`[ ${member.guild.memberCount} ]`)
     .setColor('RANDOM')
-    .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
+    .setImage('https://cdn.pg.sa/B5UN8bJSFF.png')
 var channel =member.guild.channels.find('name', 'welcome')
-var channel =member.guild.channels.find('name', '✵-「الـــتـــرحـــيـــــب')
 if (!channel) return;
 channel.send({embed : embed});
 });
+
 
 
 
@@ -958,12 +960,7 @@ client.on('message', message => {
 
 
 
-client.on("ready", () => {
-  function lol() {
-    client.guilds.get('501459185423220804').roles.find("name", "♛『Rainbow 』♛").setColor("RANDOM");
-  };
-  setInterval(lol, 1600);
-});
+
 
 
 
